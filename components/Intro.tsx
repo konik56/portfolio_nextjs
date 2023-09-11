@@ -56,7 +56,7 @@ const Intro = () => {
         transition={{ type: "tween", duration: 0.6 }}
         className="mb-10 dark:text-white mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-2xl"
       >
-        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
+        <span className="font-bold">Hello, I&apos;m Ricardo.</span> I&apos;m a{" "}
         <span className="font-bold">full-stack developer</span> with{" "}
         <span className="font-bold">8 years</span> of experience. I enjoy
         building sites & apps. My focus is React (Next.js)

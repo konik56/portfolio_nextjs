@@ -23,7 +23,7 @@ const Header = ({
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      setWindowWidth(window?.innerWidth);
     };
 
     // Add an event listener for window resize
