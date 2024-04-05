@@ -1,10 +1,10 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import { FiBook } from 'react-icons/fi';
+import pieshop from "@/public/pie.jpg";
+import youtube from "@/public/youtube.jpg";
+import xmlconverter from "@/public/xml.jpg";
 
 export const links = [
   {
@@ -35,52 +35,59 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated hight scholl",
+    location: "Kiyv, UA",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      'I graduated from Polytechnic Lyceum of NTUU "KPI", with advanced math program',
+    icon: React.createElement(FiBook),
+    date: "2015 - 2021",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "George Brown College",
+    location: "Toronto, ON",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "I'm currently studing on Computer Programming and Analisys 3 year program",
+    icon: React.createElement(LuGraduationCap),
+    date: "2022 - present",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Toronto, ON",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Also currently I work as a full-stack developer at Dayforce. I'm open to full-time opportunities.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "YouTube Clone",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "React.js Web app which copies the interface of YouTube and lavarages Rapid API integration to fetch realtime videos data and display it to a user depending on a URL.",
+    tags: ["React", "Tailwind", "Rapid API"],
+    imageUrl: youtube,
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    title: "Web Pie Shop",
+    description: "Online Shop build utilising ASP.NET CORE framework.",
+    tags: [
+      "MVC",
+      "Bootstrap",
+      "ASP.NET CORE",
+      "MySQL",
+      "xUnit",
+      "Entity Framework",
+      "Razor Pages",
+    ],
+    imageUrl: pieshop,
   },
   {
-    title: "Word Analytics",
+    title: "Configuration Converter",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Created a Legacy to Unifed Configuration and Localization Converter. To populate proper XML file to SQL Server on clock device update ",
+    tags: [".NET", "SQL Server", "Postman", "Design Patterns"],
+    imageUrl: xmlconverter,
   },
 ] as const;
 
@@ -91,17 +98,16 @@ export const skillsData = [
   "TypeScript",
   "React",
   "Next.js",
-  "Node.js",
+  "Docket",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "SQL Server",
+  "Wireshark",
+  ".NET",
+  "Java",
+  "XUnit",
+  "Mocq",
+  "Design Patterns",
+  "SOLID",
+  "Clean Code",
 ] as const;

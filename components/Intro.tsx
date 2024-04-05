@@ -37,15 +37,15 @@ const Intro = () => {
           transition={{ type: "tween", duration: 0.6 }}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="w-fit bg-gradient-to-b from-[#ffffff] p-4 pt-5 dark:from-[#000] to-transparent rounded-t-[170px] "
+          className="w-fit bg-gradient-to-b from-[#ffffff] p-4 px-0 pt-5 dark:from-[#000] to-transparent rounded-t-[170px] "
         >
           <Image
             src="/images/me.png"
             priority={true}
             quality={95}
             alt="My Image"
-            width={300}
-            height={200}
+            width={330}
+            height={220}
           />
         </motion.div>
       </div>
@@ -56,10 +56,12 @@ const Intro = () => {
         transition={{ type: "tween", duration: 0.6 }}
         className="mb-10 dark:text-white mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-2xl"
       >
-        <span className="font-bold">Hello, I&apos;m Ricardo.</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">8 years</span> of experience. I enjoy
-        building sites & apps. My focus is React (Next.js)
+        <span className="font-bold">Hello, I&apos;m Illia Konik.</span> I&apos;m
+        a <span className="font-bold">full-stack developer.</span> I enjoy
+        creating code masterships following desing patterns and best practices
+        of software development. My focus is{" "}
+        <span className="font-bold">React</span> based front-end and{" "}
+        <span className="font-bold">.NET</span> back-end development
       </motion.h1>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -90,19 +92,19 @@ const Intro = () => {
         </a>
         <div className="flex gap-2">
           <a
-            href=""
+            href="https://www.linkedin.com/feed/"
             className="text-[1.2rem] hover:scale-105 transition-all dark:hover:bg-[#a39fde] hover:bg-[#fed5d6] focus:scale-105 border border-gray-900 bg-white text-black w-fit  p-4 rounded-full flex items-center gap-2"
           >
             <BsLinkedin />
           </a>
           <a
-            href=""
+            href="https://github.com/"
             className="bg-white border hover:scale-105 transition-all dark:hover:bg-[#a39fde] hover:bg-[#fed5d6] focus:scale-105 border-gray-900 text-black w-fit  p-4 rounded-full flex items-center gap-2"
           >
             <RxGithubLogo className="text-[1.2rem]" />
           </a>
           <a
-            href=""
+            href="https://www.instagram.com/"
             className="bg-white border hover:scale-105 transition-all dark:hover:bg-[#a39fde] hover:bg-[#fed5d6] focus:scale-105 border-gray-900 text-black w-fit  p-4 rounded-full flex items-center gap-2"
           >
             <GrInstagram className="text-[1.2rem]" />

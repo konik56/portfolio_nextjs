@@ -45,7 +45,7 @@ const Contact = () => {
         Please contact me directly at{" "}
         <a className="underline" href="mailto:konik5629@gmail.com">
           {" "}
-          konik5629@gmail.com{" "}
+          illia.konik@georgebrown.ca{" "}
         </a>{" "}
         or through the form.
       </p>
