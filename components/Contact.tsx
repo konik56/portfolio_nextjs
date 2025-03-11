@@ -18,7 +18,7 @@ const Contact = () => {
   });
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Contact");
+      setActiveSection("Contacts");
       setColorForLite((num) => -num);
     }
   }, [inView, timeOfLastClick]);
@@ -53,7 +53,6 @@ const Contact = () => {
         className=" justify-center items-center w-[min(100%, 38rem)]  flex flex-col"
         action={async (fromData) => {
           await sendEmail(fromData);
-          
         }}
       >
         <input
