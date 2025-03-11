@@ -1,10 +1,12 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import { FiBook } from 'react-icons/fi';
+import { FiBook } from "react-icons/fi";
 import pieshop from "@/public/pie.jpg";
 import youtube from "@/public/youtube.jpg";
 import xmlconverter from "@/public/xml.jpg";
+import taskforce from "@/public/taskforce.jpg";
+import leetcode from "@/public/leetcode.jpg";
 
 export const links = [
   {
@@ -62,6 +64,13 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Task Force",
+    description:
+      "Workforce management application. It enables employees to track schedules, punch in/out, start/end breaks. Also it provides manager tools for tracking and managing worked hours, clock setting, and employees schedules.",
+    tags: ["React", "Spring Boot", "PostgreSQL", "MVC"],
+    imageUrl: taskforce,
+  },
+  {
     title: "YouTube Clone",
     description:
       "React.js Web app which copies the interface of YouTube and lavarages Rapid API integration to fetch realtime videos data and display it to a user depending on a URL.",
@@ -69,8 +78,16 @@ export const projectsData = [
     imageUrl: youtube,
   },
   {
+    title: "LeetCode",
+    description:
+      "I have solved over 140 leetcode tasks applying various algorithms and methodologies",
+    tags: ["LeetCode"],
+    imageUrl: leetcode,
+  },
+  {
     title: "Web Pie Shop",
-    description: "Online Shop build utilising ASP.NET CORE framework.",
+    description:
+      "Online pie shop sells various types of pies, allowing customers to browse, customize, and order pies for delivery or pickup.",
     tags: [
       "MVC",
       "Bootstrap",
@@ -89,25 +106,4 @@ export const projectsData = [
     tags: [".NET", "SQL Server", "Postman", "Design Patterns"],
     imageUrl: xmlconverter,
   },
-] as const;
-
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Docket",
-  "Git",
-  "Tailwind",
-  "SQL Server",
-  "Wireshark",
-  ".NET",
-  "Java",
-  "XUnit",
-  "Mocq",
-  "Design Patterns",
-  "SOLID",
-  "Clean Code",
 ] as const;
