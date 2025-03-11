@@ -9,15 +9,13 @@ import { useActiveSectionContext } from "@/constext/active-section-contex";
 import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
-  const { setActiveSection, setColorForLite, timeOfLastClick } =
-    useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("Projects");
-      setColorForLite((num) => -num);
     }
   }, [inView, timeOfLastClick]);
   return (
@@ -68,7 +66,7 @@ function ProjectCard({ title, description, tags, imageUrl }: ProjectCardProps) {
       >
         <div className="py-4 px-5 items-center sm:text-left pb-5 h-full flex flex-col  sm:pl-10 sm:pt-8 w-full sm:max-w-[55%] md:max-w-[50%]">
           <h3 className="text-2xl dark:text-white">{title}</h3>
-          <p className="mt-2 leading-relaxed dark:text-[#e4e4e4] text-gray-700 ">
+          <p className="mt-1 leading-relaxed dark:text-[#e4e4e4] text-gray-700 ">
             {description}
           </p>
           <Image

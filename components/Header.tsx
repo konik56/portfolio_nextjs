@@ -9,38 +9,34 @@ const Header = ({
 }: {
   setMode: React.Dispatch<React.SetStateAction<string>>;
 }) => {
-  const {
-    activeSection,
-    setActiveSection,
-    setTimeOfLastClick,
-    colorForLite,
-    setColorForLite,
-  } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   //Adaptive for Phones
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  //const [windowWidth, setWindowWidth] = useState(window?.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window?.innerWidth);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowWidth(window?.innerWidth);
+  //   };
 
-    // Add an event listener for window resize
-    window.addEventListener("resize", handleResize);
+  //   // Add an event listener for window resize
+  //   window?.addEventListener("resize", handleResize);
 
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window?.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   // Determine the threshold width
   const thresholdWidth = 640;
 
   const [showMenu, setShowMenu] = useState(false);
 
-  if (windowWidth < thresholdWidth) {
+  //if (windowWidth < thresholdWidth) {
+  if(false){
     return (
       <header className="z-[999] relative">
         <div className=" m-2 px-3 fixed top-0 right-0 z-10 flex w-full justify-end">
@@ -67,7 +63,7 @@ const Header = ({
               opacity: 1,
             }}
             transition={{
-              duration:1
+              duration: 1,
             }}
           >
             <div
@@ -90,7 +86,6 @@ const Header = ({
                 {links.map((link) => (
                   <li
                     onClick={() => {
-                      setColorForLite((num) => -num);
                       setTimeOfLastClick(Date.now());
                       setActiveSection(link.name);
                     }}
@@ -115,10 +110,7 @@ const Header = ({
                             }}
                             layoutId="activeSection"
                             className={
-                              (colorForLite == 1
-                                ? "bg-[#ffc7c8] "
-                                : "bg-[#bdb6fc] ") +
-                              " dark:bg-[#8f4fff67] absolute -z-10 inset-0 rounded-[2rem]"
+                              "bg-[#bdb6fc]dark:bg-[#8f4fff67] absolute -z-10 inset-0 rounded-[2rem]"
                             }
                           ></motion.span>
                         )}
@@ -195,7 +187,6 @@ const Header = ({
               {links.map((link) => (
                 <li
                   onClick={() => {
-                    setColorForLite((num) => -num);
                     setTimeOfLastClick(Date.now());
                     setActiveSection(link.name);
                   }}
@@ -225,10 +216,7 @@ const Header = ({
                           }}
                           layoutId="activeSection"
                           className={
-                            (colorForLite == 1
-                              ? "bg-[#ffc7c8] "
-                              : "bg-[#bdb6fc] ") +
-                            " dark:bg-[#8f4fff67] absolute -z-10 inset-0 rounded-[2rem]"
+                            "bg-[#bdb6fc] dark:bg-[#8f4fff67] absolute -z-10 inset-0 rounded-[2rem]"
                           }
                         ></motion.span>
                       )}

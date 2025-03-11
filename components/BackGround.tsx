@@ -9,7 +9,7 @@ const BackGround = () => {
         transition={{ type: "tween", duration: 2 }}
         initial={{ opacity: 0, x: 700 }}
         animate={{ opacity: 1, x: 0 }}
-        className="bg-[#fed5d6] dark:bg-[#655afba2] absolute -z-10 top-[-6rem] right-[-6rem]
+        className="bg-[#8070fb] dark:bg-[#655afba2] absolute -z-10 top-[-6rem] right-[-6rem]
    rounded-full h-[31.25rem] w-[31.25rem] round-full  blur-[6rem] dark:blur-[10rem] sm:w-[68.75rem]"
       ></motion.div>
       <motion.div

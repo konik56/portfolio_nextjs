@@ -11,19 +11,14 @@ import { useActiveSectionContext } from "@/constext/active-section-contex";
 import { useInView } from "react-intersection-observer";
 
 const Intro = () => {
-  const {
-    setActiveSection,
-    setTimeOfLastClick,
-    setColorForLite,
-    timeOfLastClick,
-  } = useActiveSectionContext();
+  const { setActiveSection, setTimeOfLastClick, timeOfLastClick } =
+    useActiveSectionContext();
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("Home");
-      setColorForLite((num) => -num);
     }
   }, [inView, timeOfLastClick]);
   return (
@@ -37,7 +32,7 @@ const Intro = () => {
           transition={{ type: "tween", duration: 0.6 }}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="w-fit bg-gradient-to-b from-[#ffffff] p-4 px-0 pt-5 dark:from-[#000] to-transparent rounded-t-[170px] "
+          className="w-fit bg-gradient-to-b from-[#ffffffa8] p-4 px-0 pt-5 https://github.com/IlliaKonikdark:from-[#cacaff] to-transparent rounded-b-[10px] rounded-t-[200px]"
         >
           <Image
             src="/images/me.png"
@@ -56,13 +51,13 @@ const Intro = () => {
         transition={{ type: "tween", duration: 0.6 }}
         className="mb-10 dark:text-white mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-2xl"
       >
-        <span className="font-bold">Hello, I&apos;m Illia Konik.</span> I&apos;m
-        a <span className="font-bold">full-stack developer.</span> I enjoy
-        creating code masterships following desing patterns and best practices
-        of software development. My focus is{" "}
-        <span className="font-bold">React</span> based front-end and{" "}
-        <span className="font-bold">.NET</span> back-end development
+        <span className="font-bold">Hello, I&apos;m Illia Konik. </span>
+        I’m a full-stack developer with a passion for building scalable, well
+        structured, and efficient solutions. Feel free to explore my work and
+        reach out if you&apos;d like to
+        <span className="font-bold"> connect</span>!
       </motion.h1>
+
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -73,7 +68,6 @@ const Intro = () => {
           href="#contact"
           onClick={() => {
             setActiveSection("Contact");
-            setColorForLite((num) => -num);
 
             setTimeOfLastClick(Date.now());
           }}
@@ -93,21 +87,15 @@ const Intro = () => {
         <div className="flex gap-2">
           <a
             href="https://www.linkedin.com/feed/"
-            className="text-[1.2rem] hover:scale-105 transition-all dark:hover:bg-[#a39fde] hover:bg-[#fed5d6] focus:scale-105 border border-gray-900 bg-white text-black w-fit  p-4 rounded-full flex items-center gap-2"
+            className="text-[1.2rem] hover:scale-105 transition-all dark:hover:bg-[#a39fde] hover:bg-[#a39fde] focus:scale-105 border border-gray-900 bg-white text-black w-fit  p-4 rounded-full flex items-center gap-2"
           >
             <BsLinkedin />
           </a>
           <a
-            href="https://github.com/"
-            className="bg-white border hover:scale-105 transition-all dark:hover:bg-[#a39fde] hover:bg-[#fed5d6] focus:scale-105 border-gray-900 text-black w-fit  p-4 rounded-full flex items-center gap-2"
+            href="https://github.com/IlliaKonik"
+            className="bg-white border hover:scale-105 transition-all dark:hover:bg-[#a39fde] hover:bg-[#a39fde] focus:scale-105 border-gray-900 text-black w-fit  p-4 rounded-full flex items-center gap-2"
           >
             <RxGithubLogo className="text-[1.2rem]" />
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            className="bg-white border hover:scale-105 transition-all dark:hover:bg-[#a39fde] hover:bg-[#fed5d6] focus:scale-105 border-gray-900 text-black w-fit  p-4 rounded-full flex items-center gap-2"
-          >
-            <GrInstagram className="text-[1.2rem]" />
           </a>
         </div>
       </motion.div>

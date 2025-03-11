@@ -12,8 +12,7 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/constext/active-section-contex";
 
 export default function Experience() {
-  const { setActiveSection, setColorForLite, timeOfLastClick } =
-    useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -22,7 +21,6 @@ export default function Experience() {
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("Experience");
-      setColorForLite((num: number) => -num);
     }
   }, [inView, timeOfLastClick]);
 
@@ -34,7 +32,7 @@ export default function Experience() {
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
-                color:"#968aff",
+                color: "#968aff",
                 background: "#f3f4f6",
                 boxShadow: "none",
                 border: "1px solid #c0c0c0",
@@ -45,13 +43,14 @@ export default function Experience() {
                 borderRight: "0.5rem solid #c0c0c0",
               }}
               date={item.date}
-
               icon={item.icon}
               iconStyle={{
                 background: "white",
               }}
             >
-              <h3 className="font-semibold text-black capitalize">{item.title}</h3>
+              <h3 className="font-semibold text-black capitalize">
+                {item.title}
+              </h3>
               <p className="font-normal text-black !mt-1">{item.location}</p>
               <p className="!mt-1 !font-normal text-gray-700">
                 {item.description}
